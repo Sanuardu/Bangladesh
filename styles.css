@@ -1,53 +1,166 @@
-html {
-	box-sizing: border-box;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: aliceblue;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Sacramento', cursive; */
 }
-body{
-    font-size: large;
-}
-svg {
-	margin: 0 auto;
-	display: block;
-    box-shadow: 3px 3px 15px gray;
-    border-radius: 2px;
-}
-.welcome:hover {
-	background-color: gold;
-	transform: translateY(8px);
-	box-shadow: 6px 6px 8px -10px red;
-}
-h1 {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	text-shadow: 2px 2px 5px gray;
+body {
+    background-color: forestgreen;
 }
 
-ul {
-	list-style-type: disc;
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-li{
-    padding:5px;
+section .main {
+    width: 580px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.container{
-    text-align: center;
+section .main .searchBx {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
 }
-.poem{
-    text-align: center;
-    font-style: italic;
-    background-color: rgb(245, 241, 206);
-    padding:15px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px gray;
-    display:inline-block;
-    margin:0 auto;
-	
+section .main .searchBx #query {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid forestgreen;
+    outline: none;
+    font-size: 23px;
+    border-radius: 30px;
+    padding-left: 45px;
+    padding-right: 60px;
+
 }
-h2{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin:20px;
-    padding: 20px 0;
-    text-shadow: 2px 2px 4px rgb(163, 159, 159);
+section .main .searchBx .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    align-items: center;
+    pointer-events: none;
+}
+#prime-btn {
+    font-family: 'Sacramento', cursive;
+    margin: 0 5px;
+    margin-top: 16px;
+    padding: 13px 25px;
+    color: black;
+    font-size: 29px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    animation-name: move-left;
+    animation-duration: 2s;
+}
+#prime-btn:hover {
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px 10px grey;
+    transform: translateY(4px);
+}
+#last-btn {
+    font-family: 'Sacramento', cursive;
+    margin: 0 5px;
+    margin-top: 16px;
+    padding: 13px 25px;
+    color: black;
+    background-color: gold;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    animation-name: move-right;
+    animation-duration: 2s;
+}
+#last-btn:hover {
+    background-color: lightskyblue;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px 10px grey;
+    transform: translateX(4px);
+}
+
+input {
+    font-family: 'Lobster', cursive;
+}
+
+@keyframes move-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes move-right {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.audio-play-btn {
+    width: 210px;
+    height: auto;
+}
+
+#myAudio {
+    visibility: hidden;
+}
+
+#google-pic {
+    box-shadow: 2px 2px 5px 10px rgb(92, 39, 238);
+}
+
+.audio-play-btn {
+    background-color: forestgreen;
+    border: none;
+    outline: none;
+}
+
+.active {
+    animation-name: animate;
+    animation-duration: 2s;
+    border: 5px dashed red;
+    border-radius: 20px;
+    
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-45deg);
+    }
 }
 

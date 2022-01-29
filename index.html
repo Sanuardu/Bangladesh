@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I-Love-Bangladesh</title>
+    <title>Google-Search</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Sacramento&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <svg width="320" height="200" style="background-color: rgb(4, 150, 4); margin-top: 8px;">
-        <circle cx="160" cy="100" r="50" stroke="red" stroke-width="5px" fill="red"></circle>
-    </svg>
-    <br>
-    <h1>Bangladesh : The land of wonders</h1>
-    <p>I am a Bangladeshi. I was born here. I am living here. I like my country. There are some features of my Country
-        that really amazing. Such as~</p>
-    <ul>
-        <li>Bangladesh is very green. Its the most fertile land in the world.</li>
-        <li>It has the longest sandy unbroken sea beach in the world.</li>
-        <li>Bangladesh is an unique Muslim majority country which gives equal status to all people regardless of caste
-            and religion. We are secular by nature because of our rich Bengali culture.</li>
-    </ul>
-
-    <br>
-    <div class="container">
-        <div class="poem">
-            <p>The savior of life, in Bangladesh.</p>
-
-            <p> The other name of harbour is Bangladesh.</p>
-
-            <p>Scrabbling for a little shade of trees, in Bangladesh.</p>
-
-            <p>In quest of the last destination of solace, in Bangladesh.</p>
-
-            <p>Still some emotional hearts are here alive, in Bangladesh.</p>
-
-            <p>Welcome my friend, we are up here to leave anything for you, in Bangladesh.</p>
+    <section>
+        <div class="main">
+            <button class="audio-play-btn" onclick="playAudio()"><img id="google-pic" src="img/searching.jpg" alt="" width="200px"></button>
+            <div class="searchBx">
+                <input type="text" id="query" value="" placeholder="Search here...">
+                <div class="icons">
+                    <div><img src="img/search-icon.png" alt="" width="20px"></div>
+                    <div><img src="img/voice-icon.jpg" alt="" width="30px"></div>
+                </div>
+            </div>
+            <div class="button">
+                <button id="prime-btn" onclick="myFunc()">Google Search</button>
+            </div>
         </div>
-    </div>
+    </section>
+    <button id="last-btn" onclick="myFunction()">Click me to change Background-Color</button>
 
-    <h2>“If You think education is expensive, try estimating the cost of ignorance </h2>
+    <audio id="myAudio" controls>
+        <source src="Audio/voice.wav" type="audio/wav">
+    </audio>
+
+    
 
 </body>
-
 </html>
